@@ -5,11 +5,13 @@ Course: Topics in CS/ NLP
 University of Guelph
 2019/04/15
 
+## Description
+
+Extractive alternative of document summa-rization inspired by the works of Zhang & Li[7],  and Jo[6].  The idea is to generate a matrix of similarities between sentences, and then cluster them into topics. The center of each set is  then  assigned  into  a  summary andcompared a human-generated one for comparison. See attached report for details.
 
 ## Compilation
 source files in the src folder
 javac preprocess/*.java offline/*.java
-
 
 ## Execution
 There are 2 main classes: Scanner and Summarizer.
@@ -32,3 +34,12 @@ default is using the same number of summary sentences.
 not taken in consideration
 The output file will contain at least the mean of the scores
 followed by the scores for each article
+
+## Future Improvements
+
+-ROUGE-N would be a great addition for comparison purposes.
+-Other similarity measures for testing purposes.
+-Word Embeddings for calculating similarity as inverse of distance.
+-Classifiers  and  potentially  Deep  Learning  methods  maybe  associatedwith the previous item would be a great field of exploration.
+-Different clusterization methods such as DBScan.
+-Implementing a ranking between clusters so that order becomes a factorin the calculations of the results.
